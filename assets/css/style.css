@@ -91,6 +91,25 @@ body > header:first-child{
     padding: 0.2rem 0.4rem;
 }
 
+.cta-btn{
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #eee;
+    color: #135 !important;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+
+    &:hover{
+        background-color: #135 !important;
+        color: #eee !important;
+        font-size:larger;
+        /* padding: 0.5rem 1.2rem; */
+        border:2px solid #eee;
+    }
+}
+
 .d-flex{
     display: flex;
 }

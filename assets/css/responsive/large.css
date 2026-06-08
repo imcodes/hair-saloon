@@ -7,6 +7,7 @@
     .menu{
         flex-direction: row;
         position: relative;
+        align-items: center;
     }
 
     .hero .container{
@@ -38,6 +39,13 @@
 
     .mission-vision-values{
         flex-direction: row;
+        flex-wrap: nowrap;
+
+        & #values, #mission, #vision{
+            flex-basis: content;
+            flex-grow: 1;
+        }
+
     }
 
     .services-grid{

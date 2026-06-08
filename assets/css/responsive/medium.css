@@ -1,0 +1,19 @@
+@media screen and (min-width: 768px){
+    .mission-vision-values{
+        flex-direction: row;
+        flex-wrap:wrap;
+
+
+        & #values{
+            flex-basis: content;
+            flex-grow: 3;
+        }
+    }
+    .services-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-container{
+        flex-direction:row;
+    }
+}
