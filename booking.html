@@ -13,6 +13,61 @@
 
     <!-- Favicon -->
     <link rel="icon" href="assets/images/favicon1.png" type="image/x-icon">
+
+    <style>
+        .page-hero{
+            background-image: url('assets/images/accessory-hands.jpg');
+            background-size: cover;
+            background-position: center ;
+            height: 20vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            &::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background:linear-gradient(#eef,#113355cd);
+                z-index: 1;
+            }
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 2rem;
+            padding: 1rem;
+        }
+
+        .form-row{
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;    
+        }
+        .form-group{
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+        }
+
+         .form-group label{
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+         .form-group input, .form-group select{
+            padding: .5rem 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
 
@@ -35,6 +90,155 @@
             </ul>
         </nav>
     </header>
-    
+
+    <section class="page-hero">
+        <div class="container" style="z-index:2;">
+            <div class="hero-content" style="padding:10px 0; ">
+                <h1 class="hero-title">Appointment Booking</h1>
+            <p style="font-size:18px">Book your appointment with us and experience the best hair care services in town. Our expert stylists are ready to give you a fresh new look.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="booking section">
+        <div class="container">
+            <h2 class="section-title">Book an appointment</h2>
+            <p class="section-description">Please fill out the form below to schedule your appointment with us. We look forward to serving you!</p>
+            <form action="#" class="booking-form" >
+                <!-- Personal details -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="first_name" placeholder="Enter your first name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="middle-name">Middle Name</label>
+                        <input type="text" id="middle-name" name="middle_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" name="last_name" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="whatsapp">Whatsapp Number</label>
+                        <input type="tel" id="whatsapp" name="whatsapp" placeholder="Enter your Whatsapp number" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="marital-status">Marital Status</label>
+                        <select id="marital-status" name="marital_status" required>
+                            <option value="">Select your marital status</option>
+                            <option value="single">Single</option>
+                            <option value="married">Married</option>
+                            <option value="divorced">Divorced</option>
+                            <option value="widowed">Widowed</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <div class="d-flex" style="gap:1rem;">
+                            <div>
+                                <input type="radio" value="male" id="male" name="gender" required>
+                                <label  for="male">Male</label>
+                            </div>
+                            <div>
+                                <input type="radio" value="female" id="female" name="gender" required>
+                                <label for="female">Female</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="date"> Date of Birth</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="favorite-color">Favorite Color</label>
+                            <input type="color" id="favorite-color" name="favorite_color" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Select Your hobies</label>
+                            <div class="d-flex" style="gap:1rem;">
+                                <div>
+                                    <input type="checkbox" value="reading" id="reading" name="hobbies">
+                                    <label for="reading">Reading</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" value="traveling" id="traveling" name="hobbies">
+                                    <label for="traveling">Traveling</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" value="cooking" id="cooking" name="hobbies">
+                                    <label for="cooking">Cooking</label>
+                                </div>
+                                 <div>
+                                    <input type="checkbox" value="sports" id="sports" name="hobbies">
+                                    <label for="sports">Sports</label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Appointment details -->
+                     <fieldset style="border:1px solid #ccc; padding:1rem;">
+                        <legend>Appointment Details</legend>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="service">Select Service</label>
+                                <select id="service" name="service" required>
+                                    <option value="">Choose a service</option>
+                                    <option value="haircut">Haircut</option>
+                                    <option value="coloring">Coloring</option>
+                                    <option value="styling">Styling</option>
+                                    <option value="treatment">Treatment</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="stylist">Preferred Stylist</label>
+                                <select id="stylist" name="stylist" required>
+                                    <option value="">Choose a stylist</option>
+                                    <option value="stylist1">Stylist 1</option>
+                                    <option value="stylist2">Stylist 2</option>
+                                    <option value="stylist3">Stylist 3</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="date">Preferred Date/Time</label>
+                                <input type="datetime-local" id="date" name="date" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group" style="flex:1;">
+                                <label for="additional-info">Additional Information</label>
+                                <textarea id="additional-info" name="additional_info" rows="4" placeholder="Any specific requests or information you'd like to share with us?"></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-row">
+                        <button type="submit" class="cta-btn" style="align-self:flex-start;">Submit</button>
+                        <button type="reset" class="cta-btn" style="align-self:flex-start; background-color:#ccc; color:#933;">Reset</button>
+                    </div>
+            </form>
+        </div>
+        
+    </section>
 </body>
 </html>

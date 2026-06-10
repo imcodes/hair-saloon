@@ -17,6 +17,13 @@ body > header:first-child{
     padding: 1rem 2.5rem;
 }
 
+.sticky-header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
+
 .logo{
     display: flex;
     align-items: center;
@@ -56,7 +63,7 @@ body > header:first-child{
     background-color: #135;
     transition: all .5s ease-in-out;
     position:absolute;
-    left:-5rem;
+    left:-50rem;
 
 }
 

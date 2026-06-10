@@ -7,7 +7,8 @@
     .menu{
         flex-direction: row;
         position: relative;
-        align-items: center;
+        align-items: center ;
+        left:0rem;
     }
 
     .hero .container{
